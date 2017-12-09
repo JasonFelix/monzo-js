@@ -234,7 +234,7 @@ account.webhooks.delete(url);
 
 ##### <a name="attachments-api-upload"></a> Get upload link for an attachment
 ```js
-monzo.attachments.upload(fileName, fileType, filePath).then(res => {
+monzo.attachments.upload(fileName, fileType).then(res => {
 	console.log(res)
 });
 ```
