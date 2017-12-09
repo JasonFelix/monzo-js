@@ -21,9 +21,6 @@
   "dependencies": {
     "axios": "~0.17.1"
   },
-  "bin": {
-    "monzo": "bin/monzo-cli.js"
-  },
   "devDependencies": {
     "esdoc": "^1.0.4",
     "esdoc-standard-plugin": "^1.0.0",
