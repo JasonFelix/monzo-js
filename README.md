@@ -50,14 +50,14 @@ npm install monzo-js
 
 ##### <a name="installation-es6"></a> ES6
 ```js
-import monzo from 'monzo-js';
+import Monzo from 'monzo-js';
 
 const monzo = new Monzo(accessToken);
 ```
 
 ##### <a name="installation-nodejs"></a> Nodejs
 ```js
-const monzo = require('monzo-js');
+const Monzo = require('monzo-js');
 
 const monzo = new Monzo(accessToken);
 ```
