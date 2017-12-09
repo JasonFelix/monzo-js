@@ -5,6 +5,11 @@ This is an easy to use asynchronous javascript library for the Monzo API.
 - [Installation](#installation)
 	- [ES6](#installation-es6)
 	- [Nodejs](#installation-nodejs)
+- [OAuth API](#oauth-api)
+	- [Using authentication code](#oauth-api-auth)
+	- [Using a password](#oauth-api-password)
+	- [Using client credentials](#oauth-api-clientcredentials)
+	- [Refreshing tokens](#oauth-api-refreshtokens)
 - [Accounts API](#accounts-api)
 	- [Get all accounts](#accounts-api-all)
 	- [Find an account](#accounts-api-find)
@@ -29,19 +34,51 @@ This is an easy to use asynchronous javascript library for the Monzo API.
 
 ### <a name="installation"></a> Installation
 ##### <a name="installation-es6"></a> ES6
-```
-import monzo from 'monzojs';
+```js
+import monzo from 'monzo-js';
 
 const monzo = new Monzo(accessToken);
 ```
 
 ##### <a name="installation-nodejs"></a> Nodejs
-```
-const monzo = require('monzojs');
+```js
+const monzo = require('monzo-js');
 
 const monzo = new Monzo(accessToken);
 ```
 
+### <a name="oauth-api"></a> OAuth API
+
+##### <a name="oauth-api-auth"></a> Authenticate using an authentication token
+```js
+Monzo.OAuth.usingAuthCode(clientId, clientSecret, redirectURI, authCode) => {
+	console.log(access_token);
+});
+
+```
+##### <a name="oauth-api-password"></a> Authenticate using a password
+```js
+Monzo.OAuth.usingPassword(clientId, username, password) => {
+	console.log(access_token);
+});
+
+```
+
+##### <a name="oauth-api-clientcredentials"></a> Authenticate using Client Credentials
+```js
+Monzo.OAuth.usingClientCredentials(clientId, clientSecret).then(({access_token}) => {
+	console.log(access_token);
+});
+
+```
+
+##### <a name="oauth-api-refreshtokens"></a> Refreshing tokens
+```js
+Monzo.OAuth.refreshToken(clientId, clientSecret, refreshToken) => {
+	console.log(access_token);
+});
+
+```
 ### <a name="accounts-api"></a> Accounts API
 
 ##### <a name="accounts-api-all"></a> Find all accounts
