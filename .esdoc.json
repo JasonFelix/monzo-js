@@ -9,6 +9,12 @@
       "name": "esdoc-node"
     },
     {
+      "name": "esdoc-ecmascript-proposal-plugin",
+      "option": {
+        "all": true
+      }
+    },
+    {
       "name": "esdoc-importpath-plugin",
       "option": {
         "stripPackageName": true,

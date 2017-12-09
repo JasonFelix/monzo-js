@@ -21,6 +21,7 @@
     "esdoc": "^1.0.4",
     "esdoc-standard-plugin": "^1.0.0",
     "esdoc-importpath-plugin": "^1.0.1",
-    "esdoc-node": "^1.0.2"
+    "esdoc-node": "^1.0.2",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0"
   }
 }
