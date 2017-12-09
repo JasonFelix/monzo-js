@@ -31,6 +31,10 @@ This is an easy to use asynchronous javascript library for the Monzo API.
 	- [Find a webhook](#webhooks-api-find)
 	- [Register a webhook](#webhooks-api-register)
 	- [Delete a webhook](#webhooks-api-delete)
+- [Attachments API](#attachments-api)
+	- [Get upload link for an attachment](#attachments-api-upload)
+	- [Register an attachment](#attachments-api-register)
+	- [Deregister an attachment](#attachments-api-deregister)
 
 ### <a name="installation"></a> Installation
 ##### <a name="installation-es6"></a> ES6
@@ -224,4 +228,27 @@ account.webhooks.register(url);
 ##### <a name="webhooks-api-delete"></a> Delete a webhook
 ```js
 account.webhooks.delete(url);
+```
+
+### <a name="attachments-api"></a> Attachments API
+
+##### <a name="attachments-api-upload"></a> Get upload link for an attachment
+```js
+monzo.attachments.upload(fileName, fileType, filePath).then(res => {
+	console.log(res)
+});
+```
+
+##### <a name="attachments-api-register"></a> Register an attachment
+```js
+monzo.attachments.register(transactionId, fileUrl, fileType).then(res => {
+	console.log(res)
+});
+```
+
+##### <a name="attachments-api-deregister"></a> Deregister an attachment
+```js
+monzo.attachments.deregister(attachmentId).then(res => {
+	console.log(res)
+});
 ```
