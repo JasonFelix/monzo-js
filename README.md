@@ -35,6 +35,9 @@ This is an easy to use asynchronous javascript library for the Monzo API.
 	- [Get upload link for an attachment](#attachments-api-upload)
 	- [Register an attachment](#attachments-api-register)
 	- [Deregister an attachment](#attachments-api-deregister)
+- [Feed API](#feed-api)
+	- [Create a feed item](#feed-api-createitem)
+	- [Query feed](#feed-api-query)
 
 ### <a name="installation"></a> Installation
 ##### <a name="installation-es6"></a> ES6
@@ -249,6 +252,25 @@ monzo.attachments.register(transactionId, fileUrl, fileType).then(res => {
 ##### <a name="attachments-api-deregister"></a> Deregister an attachment
 ```js
 monzo.attachments.deregister(attachmentId).then(res => {
+	console.log(res)
+});
+```
+
+### <a name="feed-api"></a> Feed API
+
+##### <a name="feed-api-createitem"></a> Create a feed item
+This can be done on an Account object
+```js
+account.createFeedItem('Hello World', 'https://i1.sndcdn.com/artworks-000056416529-3yp7fd-t500x500.jpg');
+```
+or on the Monzo object with an accountId
+```js
+monzo.feed.createItem(accountId, 'Hello world', 'https://i1.sndcdn.com/artworks-000056416529-3yp7fd-t500x500.jpg');
+```
+
+##### <a name="feed-api-query"></a> Query feed
+```js
+monzo.feed.query(accountId, startTime).then(res => {
 	console.log(res)
 });
 ```
