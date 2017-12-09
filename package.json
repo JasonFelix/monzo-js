@@ -1,0 +1,26 @@
+{
+  "name": "monzo-js",
+  "version": "0.0.1",
+  "description": "A javascript library for the Monzo API",
+  "main": "lib/monzo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "monzo"
+  ],
+  "author": "Jason Felix <feliix@live.co.uk>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "~0.17.1"
+  },
+  "bin": {
+    "monzo": "bin/monzo-cli.js"
+  },
+  "devDependencies": {
+    "esdoc": "^1.0.4",
+    "esdoc-standard-plugin": "^1.0.0",
+    "esdoc-importpath-plugin": "^1.0.1",
+    "esdoc-node": "^1.0.2"
+  }
+}

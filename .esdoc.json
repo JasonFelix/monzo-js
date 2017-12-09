@@ -1,0 +1,24 @@
+{
+  "source": "./lib",
+  "destination": "./docs",
+  "plugins": [
+    {
+      "name": "esdoc-standard-plugin"
+    },
+    {
+      "name": "esdoc-node"
+    },
+    {
+      "name": "esdoc-importpath-plugin",
+      "option": {
+        "stripPackageName": true,
+        "replaces": [
+          {
+            "from": "^src/",
+            "to": "lib/"
+          }
+        ]
+      }
+    }
+  ]
+}
