@@ -55,14 +55,14 @@ const monzo = new Monzo(accessToken);
 
 ##### <a name="oauth-api-auth"></a> Authenticate using an authentication token
 ```js
-Monzo.OAuth.usingAuthCode(clientId, clientSecret, redirectURI, authCode) => {
+Monzo.OAuth.usingAuthCode(clientId, clientSecret, redirectURI, authCode).then(({access_token}) => {
 	console.log(access_token);
 });
 
 ```
 ##### <a name="oauth-api-password"></a> Authenticate using a password
 ```js
-Monzo.OAuth.usingPassword(clientId, username, password) => {
+Monzo.OAuth.usingPassword(clientId, username, password).then(({access_token}) => {
 	console.log(access_token);
 });
 
@@ -78,7 +78,7 @@ Monzo.OAuth.usingClientCredentials(clientId, clientSecret).then(({access_token})
 
 ##### <a name="oauth-api-refreshtokens"></a> Refreshing tokens
 ```js
-Monzo.OAuth.refreshToken(clientId, clientSecret, refreshToken) => {
+Monzo.OAuth.refreshToken(clientId, clientSecret, refreshToken).then(({access_token}) => {
 	console.log(access_token);
 });
 
