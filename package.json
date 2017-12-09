@@ -6,11 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JasonFelix/monzo-js.git"
+  },
   "keywords": [
-    "monzo"
+    "monzo",
+    "mondo",
+    "bank",
+    "api"
   ],
   "author": "Jason Felix <feliix@live.co.uk>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "~0.17.1"
   },
