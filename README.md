@@ -5,6 +5,7 @@
 This is an easy to use asynchronous javascript library for the Monzo API.
 
 - [Installation](#installation)
+	- [Install via NPM](#installation-npm)
 	- [ES6](#installation-es6)
 	- [Nodejs](#installation-nodejs)
 - [OAuth API](#oauth-api)
@@ -42,6 +43,11 @@ This is an easy to use asynchronous javascript library for the Monzo API.
 	- [Query feed](#feed-api-query)
 
 ### <a name="installation"></a> Installation
+##### <a name="installation-npm"></a> Install via npm
+```js
+npm install monzo-js
+```
+
 ##### <a name="installation-es6"></a> ES6
 ```js
 import monzo from 'monzo-js';
