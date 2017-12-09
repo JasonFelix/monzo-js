@@ -1,6 +1,6 @@
 {
   "name": "monzo-js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A javascript library for the Monzo API",
   "main": "lib/monzo.js",
   "scripts": {
